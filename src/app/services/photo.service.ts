@@ -32,6 +32,7 @@ export class PhotoService {
       resultType: CameraResultType.Uri,
       source: CameraSource.Camera,
       quality: 100,
+      saveToGallery: true,
     });
 
     // Save the picture and add it to photo collection
@@ -114,7 +115,6 @@ export class PhotoService {
       }
     }
   }
-
   
 }
 
