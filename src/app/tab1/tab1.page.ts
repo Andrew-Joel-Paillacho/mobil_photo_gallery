@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -7,7 +8,15 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class Tab1Page {
+  constructor(private alertController: AlertController) {}
 
-  constructor() {}
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Advertencia',
+      message: 'Este es un mensaje de advertencia.',
+      buttons: ['OK']
+    });
 
+    await alert.present();
+  }
 }

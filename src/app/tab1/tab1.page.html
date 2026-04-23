@@ -13,5 +13,10 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- Contenedor para centrar el botón -->
+  <div style="display:flex; justify-content:center; align-items:center; height:100%;">
+    <ion-button color="danger" shape="round" (click)="presentAlert()" style="--border-radius:50px; width:200px; height:50px;">
+      Mostrar advertencia
+    </ion-button>
+  </div>
 </ion-content>

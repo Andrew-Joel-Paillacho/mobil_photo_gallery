@@ -12,6 +12,15 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <!-- CHANGE: Add a grid component to display the photos. -->
+  <ion-grid>
+    <ion-row>
+      <!-- CHANGE: Create a new column and image component for each photo -->
+      <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+        <ion-img [src]="photo.webviewPath"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
